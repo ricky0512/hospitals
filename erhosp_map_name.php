@@ -154,7 +154,6 @@ $erhosp['基督教'] = array(
 '屏東' => '屏基',
 '恆春' => '恆基',
 '台東' => '東基',
-'新樓' => '新樓',
 '南投' => '彰基南投',
 '雲林' => '彰基雲林',
 '彰化' => '彰基'
@@ -277,8 +276,9 @@ $erhosp['陽明'] = array(
 $erhosp['台灣大學'] = array(
 '台灣大學' => '臺大'
 );
-
-
+$erhosp['新樓'] = array(
+'新樓' => '新樓',
+);
 
 
 
@@ -540,6 +540,11 @@ function map_fullname($niddle, $fullname){
 	// output wanted, left
 	return array($output,$fullname);
 }
+
+
+//benchmark
+echo 'counts(output/left/all): '.count($outcome[0]).'/'.count($outcome[1]).'/'.count($fullname).'<br>';
+
 
 $outcome = map_fullname($erhosp, $fullname);
 
